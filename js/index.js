@@ -70,15 +70,5 @@ $(document).ready(function () {
         }
         return true;
     });
-    
-    $('.glyph-icon-grid li').on('click', function () {
-        var name = this.getAttribute('data-name');
-        vex.dialog.alert({
-            message: '<h4>Copy this</h4>' + htmlEncode('<svg xmlns="http://www.w3.org/2000/svg" class="' + name + '">'
-                    + '<use xlink:href="sprite.svg#' + name + '" />'
-                    + '</svg>')
-        });
-    });
-    
 });
 

@@ -23,9 +23,6 @@
                 <link rel="stylesheet" type="text/css" href="css/glyph.css">
                 <link rel="stylesheet" type="text/css" href="css/prism.css">
                 <link rel="stylesheet" type="text/css" href="css/animate.css">
-                <link rel="stylesheet" type="text/css" href="css/vex.css">
-                <link rel="stylesheet" type="text/css" href="css/vex-theme-default.css">
-                <link rel="stylesheet" type="text/css" href="css/vex-theme-plain.css">
                 <script src="//use.typekit.net/gpx0vkx.js"></script>
                 <script>try{Typekit.load();}catch(e){}</script>
                 <script src="js/jquery-2.1.4.min.js"></script>
@@ -33,8 +30,6 @@
                 <script src="js/polyfill.js"></script>
                 <script src="js/typeahead.js"></script>
                 <script src="js/index.js"></script>
-                <script src="js/vex.combined.min.js"></script>
-                <script>vex.defaultOptions.className = 'vex-theme-plain';</script>
 </head>
 <body class="glyph">
    <section class="intro">
@@ -43,7 +38,7 @@
             <div class="content">
                 <h1>Glyph</h1>
                 <p>
-                Icon font is so yesterday. Say hello to &ldquo;Glyph&rdquo;, a semantic and versatile SVG icon system designed for customization.
+                Icon font is so yesterday. Say hello to &ldquo;Glyph&rdquo;, a semantic and versatile SVG icon set designed for customization.
                 </p>
                 <div class="button-group">
                     <a href="https://github.com/frexy/glyph-iconset" class="button"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -74,7 +69,11 @@ View on Github</a>
             <ul class="glyph-icon-grid">
                 {{#each icons}}
                 <li data-keyword="{{keyword}}" data-name="{{name}}">
-                    <div class="glyph-tooltip">{{name}}</div>
+                    <div class="glyph-tooltip">
+                        <span>{{name}}</span>
+                        <input onClick="this.select();" value="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;{{name}}&quot;&gt;
+                        &lt;use xlink:href=&quot;sprite.svg#{{name}}&quot; /&gt;&lt;/svg&gt;" />
+                    </div>
                     <svg xmlns="http://www.w3.org/2000/svg" class="{{name}}">
                         <use xlink:href="sprite.svg#{{name}}" />
                     </svg>
@@ -86,7 +85,7 @@ View on Github</a>
                 <li>Download and copy the sprite.svg to a folder.</li>
 
                 <li>
-                    Search for the icons, click on the icon to copy snippet and paste into your HTML document.
+                    Search for the icons, hover on the icon to copy snippet and paste into your HTML document.
                 </li>
                 <li>You&rsquo;re done. Now grab some coffee and style them!</li>
             </ol>
@@ -151,9 +150,6 @@ fill: blue;
 
                             </div>
                         </footer>
-
-                        <script src="js/common.js"></script>
-
                         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
                         <script>
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
