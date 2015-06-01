@@ -63,11 +63,18 @@ $(document).ready(function () {
     }).on('typeahead:selected', function () {
         look();
     }).on('keydown', function (ev) {
+        
+        if (this.value.length == 1) {
+            $('.glyph-icon-grid li').css('display', 'block');
+            return;
+        }
+
         if (ev.keyCode == 13) {
             $(this).typeahead('close');
             look();
             return false;
         }
+
         return true;
     });
 });
