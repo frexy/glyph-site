@@ -1,0 +1,3 @@
+[submodule "glyph-iconset"]
+	path = glyph-iconset
+	url = https://github.com/frexy/glyph-iconset.git

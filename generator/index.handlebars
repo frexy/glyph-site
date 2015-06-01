@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+    <![endif]-->
+    <!--[if IE 7]>
+    <html class="no-js lt-ie9 lt-ie8">
+        <![endif]-->
+        <!--[if IE 8]>
+        <html class="no-js lt-ie9">
+            <![endif]-->
+            <!--[if gt IE 8]>
+            <!-->
+            <html class="no-js">
+                <!--<![endif]-->
+<head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <title>Glyph, a versatile SVG icon set</title>
+                <meta name="description" content="">
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+                <link rel="stylesheet" type="text/css" href="css/normalize.css">
+                <link rel="stylesheet" type="text/css" href="css/glyph.css">
+                <link rel="stylesheet" type="text/css" href="css/prism.css">
+                <link rel="stylesheet" type="text/css" href="css/animate.css">
+                <link rel="stylesheet" type="text/css" href="css/vex.css">
+                <link rel="stylesheet" type="text/css" href="css/vex-theme-default.css">
+                <link rel="stylesheet" type="text/css" href="css/vex-theme-plain.css">
+                <script src="//use.typekit.net/gpx0vkx.js"></script>
+                <script>try{Typekit.load();}catch(e){}</script>
+                <script src="js/jquery-2.1.4.min.js"></script>
+                <script src="js/prism.js"></script>
+                <script src="js/polyfill.js"></script>
+                <script src="js/typeahead.js"></script>
+                <script src="js/index.js"></script>
+                <script src="js/vex.combined.min.js"></script>
+                <script>vex.defaultOptions.className = 'vex-theme-plain';</script>
+</head>
+<body class="glyph">
+   <section class="intro">
+   <iframe class="stars" src="https://ghbtns.com/github-btn.html?user=frexy&repo=glyph-iconset&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        <div class="wrapper">
+            <div class="content">
+                <h1>Glyph</h1>
+                <p>
+                Icon font is so yesterday. Say hello to &ldquo;Glyph&rdquo;, a semantic and versatile SVG icon system designed for customization.
+                </p>
+                <div class="button-group">
+                    <a href="https://github.com/frexy/glyph-iconset" class="button"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#231E1B" d="M8,0.1c-4.5,0-8.1,3.6-8.1,8.1c0,3.6,2.3,6.6,5.5,7.7
+    C5.8,16,6,15.7,6,15.5c0-0.2,0-0.7,0-1.4C3.7,14.6,3.3,13,3.3,13c-0.4-0.9-0.9-1.2-0.9-1.2c-0.7-0.5,0.1-0.5,0.1-0.5
+    c0.8,0.1,1.2,0.8,1.2,0.8c0.7,1.2,1.9,0.9,2.4,0.7c0.1-0.5,0.3-0.9,0.5-1.1c-1.8-0.2-3.7-0.9-3.7-4c0-0.9,0.3-1.6,0.8-2.2
+    c-0.1-0.2-0.4-1,0.1-2.1c0,0,0.7-0.2,2.2,0.8C6.6,4.1,7.3,4,8,4c0.7,0,1.4,0.1,2,0.3c1.5-1,2.2-0.8,2.2-0.8c0.4,1.1,0.2,1.9,0.1,2.1
+    c0.5,0.6,0.8,1.3,0.8,2.2c0,3.1-1.9,3.8-3.7,4C9.8,12,10,12.5,10,13.3c0,1.1,0,2,0,2.2c0,0.2,0.1,0.5,0.6,0.4
+    c3.2-1.1,5.5-4.1,5.5-7.7C16.1,3.7,12.5,0.1,8,0.1z"/>
+</svg>
+View on Github</a>
+                    <a href="https://github.com/frexy/glyph-iconset" class="button"><svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-document-bullet-list"><use xlink:href="sprite.svg#si-glyph-document-bullet-list" /></svg> Usage</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="main">
+        <div class="wrapper">
+            <form class="glyph-search">
+
+                <span class="twitter-typeahead" style="position: relative; display: inline-block; direction: ltr;">
+                    <input id="mega-search" name="mega-search" placeholder="Search then click on icon to copy the snippet" type="text">
+                </span>
+                 <div class="animated infinite search-icon"></div>
+            </form>
+
+            <ul class="glyph-icon-grid">
+                {{#each icons}}
+                <li data-keyword="{{keyword}}" data-name="{{name}}">
+                    <div class="glyph-tooltip">{{name}}</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="{{name}}">
+                        <use xlink:href="sprite.svg#{{name}}" />
+                    </svg>
+                </li>
+                {{/each}}
+            </ul>
+            <h3>Usage</h3>
+            <ol class="glyph-steps">
+                <li>Download and copy the sprite.svg to a folder.</li>
+
+                <li>
+                    Search for the icons, click on the icon to copy snippet and paste into your HTML document.
+                </li>
+                <li>You&rsquo;re done. Now grab some coffee and style them!</li>
+            </ol>
+            <h3>Styling the icons</h3>
+             <p>
+                If you want to customize the icons using CSS in webkit-based browsers and IE, you will need to include <a href="https://github.com/frexy/svg-sprite-polyfill">polyfill.js</a> in your document. The polyfill forces Chrome, Safari and IE to treat the SVG inside
+                <code class="language-markup">&lt;use&gt;</code>
+                as inline SVG so we can style all the SVG elements easily.
+            </p>
+            <p>Open sample.html or search and click on the icon to copy its snippet and insert to your HTML:</p>
+            <pre class="language-markup"><code>&lt;div class="glyph-icon"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-bubble-message-hi"&gt;
+&lt;use xlink:href="sprite.svg#si-glyph-bubble-message-hi" /&gt;&lt;/div&gt;
+&lt;/svg&gt;
+</code></pre>
+            Since Glyph is SVG with fluid size, we need to specify the icon size:
+            <pre class="language-css"><code>.glyp-icon svg {
+width:16px;
+height:16px;
+}</code></pre>
+            <p>
+                You can set the icon in any width and height but we recommend to set the SVG in its base grid 16x16 (16x16, 32x32) to keep pixel perfection and sharpness.
+            </p>
+
+            <p>
+                Glyph is carefully handcoded with semantic naming so that you can change all or some icons color with just these simple CSS snippets below.
+            </p>
+            <p>You can style the whole set with a single line of CSS:</p>
+            <pre class="language-css"><code>.si-glyph * {
+fill: red;
+}
+</code></pre>
+            <p>Targeting an individual icon is super easy:</p>
+            <pre class="language-css"><code>.si-glyph-bubble-message-hi {
+fill: blue;
+}
+</code></pre>
+           
+
+        </div>
+
+    </section>
+                        <!-- close main -->
+
+                        <footer class="wrapper site-footer">
+                            <div class="credit">
+                                A project by
+                                <a href="https://smarticons.co">SmartIcons</a>
+                                <p class="footer-logo"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="53.322px" height="42.001px" viewBox="0 0 53.322 42.001" enable-background="new 0 0 53.322 42.001" xml:space="preserve">
+<path fill="#678F5A" d="M47.765,1.241c-3.073-1.974-9.44-1.365-10.69,0.241c-1.345,1.729,0.698,3.244,2.028,2.431
+    c3.026-2.401,11.35,3.743,8.002,8.026c-5.096,5.54-12.758-3.634-15.475-5.342C17.653-2.685,4.498,2.48,0.724,16.032
+    C-2.585,27.912,6.4,38.59,8.472,40.851c0.002,0.002,0.006,0.006,0.007,0.009c0.333,0.365,0.742,0.659,1.204,0.857
+    c0.423,0.182,0.89,0.284,1.38,0.284c1.073,0,2.033-0.483,2.674-1.244c0.664-0.628,0.786-1.748,1.007-2.523
+    c0.403-1.417,0.748-3.067,3.364-2.99c2.722,0.08,3.512,2.915,4.46,4.305c0.9,1.318,1.865,2.182,3.362,2.182
+    c0.5,0,0.977-0.1,1.412-0.281c1.236-0.514,2.132-1.683,2.254-3.074c0.004-0.066,0.007-0.132,0.012-0.199
+    c0.336-5.343,2.712-10.228,4.684-13.294c0.206-0.32,0.157-1.052-0.393-1.358c-2.727-1.519-3.174-3.979-3.174-3.979
+    c3.659,2.49,12.99,6.487,19.632-1.435S50.837,3.215,47.765,1.241z M21.317,27.983c-2.844-0.279-7.259-3.77-6.814-9.313
+    c0.495-6.16,6.663-9.212,6.367-8.852c-3.81,4.645,2.512,8.042,4.407,11.742C27.331,25.577,24.683,28.313,21.317,27.983z
+     M26.633,14.819c-0.98,0-1.773-0.794-1.773-1.773s0.794-1.773,1.773-1.773c0.978,0,1.773,0.794,1.773,1.773
+    S27.613,14.819,26.633,14.819z"/>
+</svg></p>
+
+                            </div>
+                        </footer>
+
+                        <script src="js/common.js"></script>
+
+                        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+                        <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+</script>
+</body>
+                    </html>
