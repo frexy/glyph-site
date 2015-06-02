@@ -6,22 +6,6 @@ function htmlEncode(value){
   return $('<div/>').text(value).html();
 }
 
-/*
- * Public debounce function
- * @param fn - The function to debounce
- * @param ms - A number of miliseconds to debounce
- */
-
-var debounce = function (fn, ms) {
-    //
-    var flagFn = createDebouncer(fn, ms);
-    return function () {
-        flagFn = flagFn.apply(undefined, arguments);
-        return void 0;
-    };
-};
-
-
 $(document).ready(function () {
 
     var $si = $('.search-icon');
@@ -70,6 +54,11 @@ $(document).ready(function () {
         }
 
         if (ev.keyCode == 13) {
+            //
+            if (this.value.length == 0) {
+                return false;
+            }
+            
             $(this).typeahead('close');
             look();
             return false;
