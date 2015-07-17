@@ -94,6 +94,7 @@
             window.setTimeout(fn, 300);
         }),
     (
+        
         /MSIE\b/.test(navigator.userAgent)       ||
 	    /Trident\b/.test(navigator.userAgent)    || 
         /AppleWebKit\/(\d+)/.test(navigator.userAgent)  

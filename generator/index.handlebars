@@ -44,6 +44,7 @@
                 <meta name="theme-color" content="#ffffff">
                 <script src="//use.typekit.net/gpx0vkx.js"></script>
                 <script>try{Typekit.load();}catch(e){}</script>
+                <script src="js/iconwc.js"></script>
                 <script src="js/jquery-2.1.4.min.js"></script>
                 <script src="js/prism.js"></script>
                 <script src="js/typeahead.js"></script>
@@ -81,36 +82,36 @@
                 <li data-keyword="{{keyword}}" data-name="{{name}}">
                     <div class="glyph-tooltip">
                         <span>{{name}}</span>
-                        <input onClick="this.select();" value="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;{{name}}&quot;&gt;&lt;use xlink:href=&quot;sprite.svg#{{name}}&quot; /&gt;&lt;/svg&gt;" />
+                        <input onClick="this.select();" value="&lt;svg-icon&gt;&lt;src href=&quot;sprite.svg#{{name}}&quot; /&gt;&lt;/svg-icon&gt;" />
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="{{name}}">
-                        <use xlink:href="sprite.svg#{{name}}" />
-                    </svg>
+                    
+                    <svg-icon>
+                        <src href="sprite.svg#{{name}}" />
+                    </svg-icon>
                 </li>
                 {{/each}}
             </ul>
             <h3 id="usage" name="usage">Usage</h3>
             <ol class="glyph-steps">
-                <li>Download and copy the sprite.svg to a public folder of your project.</li>
-                <li>
-                    Search for the icons, hover on the icon to copy snippet and paste into your HTML document<strong>*</strong>. 
-                </li>
-                <li>You&rsquo;re done. Now grab some coffee and style them!</li>
+                <li>Clone or download this <a href="https://github.com/frexy/glyph-iconset/">repository</a>.</li>
+                <li>Copy the svgs you need or the <em>sprite/sprite.svg</em> to your project. Or you can generate a custom sprite file which contains only the icons you need</li>
+                <li>Use one of the methods below to embed the icon in your design</li>
             </ol>
-            <p><strong>(*)</strong>: Maybe you have to change the relative path in the snippet according to where you put the sprite file in your project folder.</p>
-            <h3>Styling the icons</h3>
-             <p>
-                If you want to customize the icons using CSS in webkit-based browsers and IE, you will need to include <a href="https://github.com/frexy/svg-sprite-polyfill">polyfill.js</a> in your document. The polyfill forces Chrome, Safari and IE to treat the SVG inside
-                <code class="language-markup">&lt;use&gt;</code>
-                as inline SVG so we can style all the SVG elements easily.
-            </p>
-            <p>Open sample.html or search and click on the icon to copy its snippet and insert to your HTML:</p>
-            <pre class="language-markup"><code>&lt;div class="glyph-icon"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-bubble-message-hi"&gt;
-&lt;use xlink:href="sprite.svg#si-glyph-bubble-message-hi" /&gt;
-&lt;/svg&gt;&lt;/div&gt;
-</code></pre>
-            Since Glyph is SVG with fluid size, we need to specify the icon size:
-            <pre class="language-css"><code>.glyp-icon svg {
+            <h4 id="method-img">Use an IMG tag</h4>
+            You can simply use an IMG tag, with <em>src</em> attribute pointing to the icon.
+            <div>
+                <pre class="language-markup"><code>&lt;img src="svg/si-glyph-bed.svg"/&gt;</code></pre>
+            </div>
+            <h4 id="method-wc">Use the SVG icon web component</h4>
+            The <a href="https://github.com/frexy/svg-icon-webcomponent">SVG icon web component</a> is a good solution if you want to style the icons with custom CSS. Include the <a href="https://raw.githubusercontent.com/frexy/svg-icon-webcomponent/master/build/iconwc.js">.js file</a> in your &lt;head&gt;, use the following HTML for each icon.
+            <div>
+                <pre class="language-markup"><code>&lt;svg-icon&gt;&lt;src href="svg/si-glyph-bed.svg"/&gt;&lt;/svg&gt;
+                    &lt;!-- or use a sprite --&gt;
+&lt;svg-icon&gt;&lt;src href="sprite.svg#si-glyph-bed"/&gt;&lt;/svg&gt;
+                </code></pre>
+            </div>
+            <h5>Styling the icons</h5> 
+            <pre class="language-css"><code>.glyph-icon svg {
 width:16px;
 height:16px;
 }</code></pre>
@@ -132,8 +133,9 @@ fill: blue;
 }
 </code></pre>
            
-
-        </div>
+<h5>Generate custom sprite</h5>
+        Please visit <a href="http://github.com/frexy/glyph-iconset">Glyph's github page</a> for details. 
+        </div> 
 
     </section>
                         <!-- close main -->

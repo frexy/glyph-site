@@ -9,6 +9,7 @@ si-glyph-alien
 si-glyph-aligh-left
 si-glyph-align-center
 si-glyph-align-left
+si-glyph-align-right
 si-glyph-ambulance
 si-glyph-anchor
 si-glyph-android

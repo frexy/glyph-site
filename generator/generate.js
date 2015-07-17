@@ -23,6 +23,12 @@ fs.readdir(svgBase, function (err, files) {
                 return f.substring(0, (f.length - 4));
             }).join("\n")
         );
+        
+        fs.writeFileSync(
+            __dirname + '/../sprite.svg',
+            fs.readFileSync(__dirname + '/../glyph-iconset/sprite/sprite.svg')
+                .toString('utf8')
+        );
 
         // write the index/index.html file
         fs.writeFileSync(
